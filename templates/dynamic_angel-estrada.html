@@ -137,42 +137,44 @@
         </table>
       </td>
     </tr>
-    <tr>
-      <td bgcolor="#FEF8D5" style="padding: 29.5px 2px;" class="section-honorable-mentions">
-        <table align="center" width="552" border="0" cellpadding="0" cellspacing="0">
-          <tr>
-            <td width="552" align="center">
-              <h2 style="margin: 0 0 28px 0; font-size: 31px; line-height: 1.03226; color: #FF462D; font-weight: 700; mso-line-height-rule: exactly;">Honorable Mentions</h2>
-            </td>
-          </tr>
-        </table>
-        <table align="center" width="552" border="0" cellpadding="0" cellspacing="22" style="border-collapse: separate; border-spacing: 22px; *border-collapse: expression('separate', cellSpacing = '22px');">
-          <tr>
-            {% for item in resy.contact.recommended_ids %}
-              <td width="265" bgcolor="#ffffff" style="border: 1px; border-style: solid; border-color: #CBCBCB; padding: 15px 15.5px" class="card">
-                <table align="center" width="232" height="100%" border="0" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td align="center" style="margin-bottom: 8px;">
-                      <a href="{{resy.lookups.recommended_restaurants[item].url}}" target="_blank">
-                        <img width="100%" src="{{resy.lookups.recommended_restaurants[item].thumbnail}}" alt="{{resy.lookups.recommended_restaurants[item].name}}" style="display:block; border: 0;">
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center" style="padding: 11px 0 6px 0;">
-                      <h4 style="font-weight: 400; color: #58585C!important; margin: 0 0 2px 0; font-size: 24px; line-height: 1.3333; mso-line-height-rule: exactly;">
-                        {{resy.lookups.recommended_restaurants[item].name}}
-                      </h4>
-                      <a href="{{resy.lookups.recommended_restaurants[item].url}}" style="font-weight: 700; font-size: 24px; line-height: 1.3333; color: #336DDE; text-decoration: none; mso-line-height-rule: exactly;">Book Now</a>
-                    </td>
-                  </tr>
-                </table>
+    {% if resy %}
+      <tr>
+        <td bgcolor="#FEF8D5" style="padding: 29.5px 2px;" class="section-honorable-mentions">
+          <table align="center" width="552" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="552" align="center">
+                <h2 style="margin: 0 0 28px 0; font-size: 31px; line-height: 1.03226; color: #FF462D; font-weight: 700; mso-line-height-rule: exactly;">Honorable Mentions</h2>
               </td>
-            {% endfor %}
-          </tr>
-        </table>
-      </td>
-    </tr>
+            </tr>
+          </table>
+          <table align="center" width="552" border="0" cellpadding="0" cellspacing="22" style="border-collapse: separate; border-spacing: 22px; *border-collapse: expression('separate', cellSpacing = '22px');">
+            <tr>
+              {% for item in resy.contact.recommended_ids %}
+                <td width="265" bgcolor="#ffffff" style="border: 1px; border-style: solid; border-color: #CBCBCB; padding: 15px 15.5px" class="card">
+                  <table align="center" width="232" height="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="center" style="margin-bottom: 8px;">
+                        <a href="{{resy.lookups.recommended_restaurants[item].url}}" target="_blank">
+                          <img width="100%" src="{{resy.lookups.recommended_restaurants[item].thumbnail}}" alt="{{resy.lookups.recommended_restaurants[item].name}}" style="display:block; border: 0;">
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="padding: 11px 0 6px 0;">
+                        <h4 style="font-weight: 400; color: #58585C!important; margin: 0 0 2px 0; font-size: 24px; line-height: 1.3333; mso-line-height-rule: exactly;">
+                          {{resy.lookups.recommended_restaurants[item].name}}
+                        </h4>
+                        <a href="{{resy.lookups.recommended_restaurants[item].url}}" style="font-weight: 700; font-size: 24px; line-height: 1.3333; color: #336DDE; text-decoration: none; mso-line-height-rule: exactly;">Book Now</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              {% endfor %}
+            </tr>
+          </table>
+        </td>
+      </tr>
+    {% endif %}
     <tr>
       <td>
         <table align="center" width="540" border="0" cellpadding="0" cellspacing="0" style="padding-top: 40px;">
