@@ -5,11 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
   <title>Webmail Test - Angel Estrada</title>
   <style type="text/css">
-    /*:root {
-      color-scheme: light only;
-    }*/
+    :root{
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
+    }
     *{
       box-sizing: border-box;
     }
@@ -54,18 +57,37 @@
         -moz-box-shadow: 0px 3px 8px rgb(0 0 0 / 12%); 
       }
     }
-    @media (prefers-color-scheme: dark) {
+    @media (prefers-color-scheme: light) {
+        body{
+          background-color: #ffffff;
+        }
         body > table{
-          background-color: #ebebeb!important;
-          color: #ffffff!important;
+          background-color: #FFFFF5;
         }
         .section-honorable-mentions{
-          background-color: #f9f9f9!important;
+          background-color: #FEF8D5;
         }
         .section-event-invites{
-          background-color: #171a19!important;
+          background-color: #E6F2EC;
         }
     }
+    @media (prefers-color-scheme: dark) {
+        body > table{
+          background-color: #222222;
+          color: #ffffff!important;
+        }
+        .shadow,
+        .card{
+          background-color: #111111;
+        }
+        .section-honorable-mentions{
+          background-color: #181818;
+        }
+        .section-event-invites{
+          background-color: #121615;
+        }
+    }
+
   </style>
 </head>
 <body>
@@ -126,7 +148,7 @@
         </table>
         <table align="center" width="552" border="0" cellpadding="0" cellspacing="0">
           <tr>
-            <td width="265" bgcolor="#ffffff" style="border: 1px; border-style: solid; border-color: #CBCBCB; padding: 15px 15.5px">
+            <td width="265" bgcolor="#ffffff" style="border: 1px; border-style: solid; border-color: #CBCBCB; padding: 15px 15.5px" class="card">
               <table align="center" width="232" height="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td align="center" style="margin-bottom: 8px;">
@@ -144,7 +166,7 @@
               </table>
             </td>
             <td width="22">&nbsp;</td>
-            <td width="265" bgcolor="#ffffff" style="border: 1px; border-style: solid; border-color: #CBCBCB; padding: 15px 15.5px">
+            <td width="265" bgcolor="#ffffff" style="border: 1px; border-style: solid; border-color: #CBCBCB; padding: 15px 15.5px" class="card">
               <table align="center" width="232" height="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td align="center" style="margin-bottom: 8px;">
