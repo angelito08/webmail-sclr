@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Webmail Test - Angel Estrada</title>
   <style type="text/css">
+    /*:root {
+      color-scheme: light only;
+    }*/
     *{
       box-sizing: border-box;
     }
@@ -51,6 +54,18 @@
         -moz-box-shadow: 0px 3px 8px rgb(0 0 0 / 12%); 
       }
     }
+    @media (prefers-color-scheme: dark) {
+        body > table{
+          background-color: #ebebeb!important;
+          color: #ffffff!important;
+        }
+        .section-honorable-mentions{
+          background-color: #f9f9f9!important;
+        }
+        .section-event-invites{
+          background-color: #171a19!important;
+        }
+    }
   </style>
 </head>
 <body>
@@ -67,7 +82,7 @@
     </tr>
     <tr>
       <td>
-        <table align="center" width="540" bgcolor="#FFFFF5" border="0" cellpadding="0" cellspacing="0">
+        <table align="center" width="540" border="0" cellpadding="0" cellspacing="0">
           <tr>
             <td width="540" style="border: 0; border-top: 1px; border-bottom: 1px; border-style: solid; border-color: #FF341A; padding: 16px 0;" align="center">
               <img src="./images/title-what_to_eat_drink.png" alt="What to Eat &amp; Drink" style="display:block; border: 0;">
@@ -101,7 +116,7 @@
       </td>
     </tr>
     <tr>
-      <td bgcolor="#FEF8D5" style="padding: 29.5px 24px;">
+      <td bgcolor="#FEF8D5" style="padding: 29.5px 24px;" class="section-honorable-mentions">
         <table align="center" width="552" border="0" cellpadding="0" cellspacing="0">
           <tr>
             <td width="552" align="center">
@@ -152,7 +167,7 @@
     </tr>
     <tr>
       <td>
-        <table align="center" width="540" bgcolor="#FFFFF5" border="0" cellpadding="0" cellspacing="0" style="padding-top: 40px;">
+        <table align="center" width="540" border="0" cellpadding="0" cellspacing="0" style="padding-top: 40px;">
           <tr>
             <td bgcolor="#ffffff" style="padding: 30px; padding-bottom: 38px; border: 0; border-top: 1px; border-style: solid; border-color: #FF341A;" class="shadow">
               <h3 style="margin: 0 0 14px 0; font-size: 24px; line-height: 1.5; color: #FF462D; font-weight: 700; mso-line-height-rule: exactly;">The Drink Proposal</h3>
@@ -224,7 +239,7 @@
       </td>
     </tr>
     <tr>
-      <td bgcolor="#E6F2EC" style="padding: 30px 33px;">
+      <td bgcolor="#E6F2EC" style="padding: 30px 33px;" class="section-event-invites">
         <table align="center" width="534" border="0" cellpadding="0" cellspacing="0">
           <tr>
             <td valign="top" width="242" align="center">
@@ -265,7 +280,7 @@
             <td style="padding: 16px 0;">
               <table align="center" width="540" height="330" border="0" cellpadding="0" cellspacing="0" >
                 <tr>
-                  <td width="540" bgcolor="#686868" align="center" valign="middle" >
+                  <td width="540" height="330" bgcolor="#686868" align="center" valign="middle" >
                     <h2 style="margin: 0; font-size: 31px; line-height: 1.03226; color: #ffffff!important; font-weight: 700; mso-line-height-rule: exactly;">
                       From the Tipline Creative
                     </h2>
